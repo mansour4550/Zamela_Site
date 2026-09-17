@@ -1,0 +1,27 @@
+import React from 'react';
+const asset = name => `${import.meta.env.BASE_URL}images/${name}`;
+const promises = [
+ ['100% Extra Vierge','Pureté, fraîcheur et authenticité.'],
+ ['Extraction à froid','Préservation des arômes naturels.'],
+ ['Made in Tunisia','Une signature méditerranéenne.'],
+];
+const strengths = [
+ ['100%','Extra Virgin Olive Oil','Une huile extra vierge sélectionnée pour son profil naturel et sa richesse aromatique.'],
+ ['❄','Cold Extraction','Un process pensé pour préserver les arômes, la fraîcheur et la valeur nutritionnelle.'],
+ ['✓','International Standards','Une approche qualité structurée pour les marchés professionnels et internationaux.'],
+ ['TN','Premium Tunisian Origin','Une signature méditerranéenne issue d’un territoire oléicole reconnu.'],
+];
+export default function HomePage({ onNavigate }){
+ return <main id="contenu" className="home-page">
+  <section className="home-hero" aria-labelledby="home-title"><div className="container home-hero-inner">
+   <div className="home-hero-copy"><span className="badge-pill">Producteur tunisien d’huile d’olive premium</span><h1 id="home-title">Huilerie El Ferdaws,<br />l’origine maîtrisée de<br /><em>ZMELA Olive Oil.</em></h1><p>De nos terroirs tunisiens jusqu’aux marchés internationaux, nous produisons une huile d’olive extra vierge premium, fidèle à la Méditerranée, portée par la précision moderne et l’exigence du goût.</p><span className="home-motto">Every Drop Tells a Story.</span><div className="home-actions"><a className="button" href="#huilerie">Découvrir l’huilerie <span aria-hidden="true">↓</span></a><a className="text-link" href="#export">Solutions export <span aria-hidden="true">↗</span></a></div></div>
+   <div className="home-hero-visual"><img src={asset('formats-04.jpg')} alt="La gamme ZMELA Olive Oil dans un décor méditerranéen" fetchPriority="high" width="1448" height="1086" /><span className="home-origin-stamp">MADE<br />IN<br /><strong>TUNISIA</strong></span></div>
+  </div></section>
+  <div className="home-promises container">{promises.map(([title,text])=><div key={title}><span className="promise-mark" aria-hidden="true">✦</span><div><strong>{title}</strong><p>{text}</p></div></div>)}</div>
+  <section className="home-story container" id="huilerie" aria-labelledby="story-title"><div className="home-story-header"><h2 id="story-title">From Tunisian Groves<br /><em>to Your Table</em></h2></div><div className="home-story-collage"><img className="home-grove" src={asset('process-04.jpg')} alt="Oliveraie méditerranéenne" loading="lazy" /><img className="home-mill" src={asset('quality-production.jpg')} alt="Huilerie et équipements de production" loading="lazy" /><img className="home-bottle" src={asset('formats-11.jpg')} alt="Bouteille ZMELA Olive Oil" loading="lazy" /></div></section>
+  <section className="home-strengths container" aria-label="Les engagements ZMELA">{strengths.map(([symbol,title,text])=><article key={title}><span className="strength-symbol" aria-hidden="true">{symbol}</span><h3>{title}</h3><p>{text}</p></article>)}</section>
+  <section className="home-pages"><div className="container home-pages-inner"><div><span className="badge-pill">Website pages</span><h2>Une maquette multi-pages claire, premium et <em>prête à présenter.</em></h2><p>Cette version sépare chaque partie stratégique du site afin de créer une navigation professionnelle : huilerie, processus, qualité, certifications, formats, export et contact.</p><div className="home-actions"><button className="button" onClick={() => onNavigate && onNavigate('processus')}>Voir le processus <span aria-hidden="true">↗</span></button><button className="text-link" onClick={() => onNavigate && onNavigate('certifications')}>Voir les awards <span aria-hidden="true">↗</span></button></div></div><div className="home-site-map"><span className="eyebrow gold">Website Structure Visual</span><a className="map-home" onClick={() => onNavigate && onNavigate('accueil')}>Home <span aria-hidden="true">↗</span></a><div className="map-links"><a href="#huilerie">Huilerie</a><a onClick={() => onNavigate && onNavigate('processus')}>Processus</a><a onClick={() => onNavigate && onNavigate('qualite')}>Qualité</a><a href="#export">Export</a></div></div></div></section>
+  <section className="home-partnership container" id="export"><span className="badge-pill">ZMELA Olive Oil</span><h2>Une huile tunisienne premium,<br />pensée pour les <em>partenaires exigeants.</em></h2><p>ZMELA Olive Oil accompagne les distributeurs, importateurs, retailers et projets private label avec une offre élégante et export-ready.</p><a className="button" href="#contact">Demander un partenariat <span aria-hidden="true">↗</span></a></section>
+ </main>;
+}
+export function HomeFooter(){return <footer className="footer home-footer" id="contact"><div className="container home-footer-inner"><div><span className="wordmark">Zmela<span>OLIVE OIL</span></span><h3>Huilerie El Ferdaws</h3><p>Producteur tunisien d’huile d’olive extra vierge premium et maison productrice de ZMELA Olive Oil.</p></div><div><h4>ZMELA Olive Oil</h4><p>Every Drop Tells a Story.</p><p>From Tunisian Groves to Your Table.</p></div><div><h4>Contact</h4><address><p>Route Sharban Al-Sawasi, Mahdia 5140</p><p><a href="tel:+21693454606">93 454 606</a> / <a href="tel:+21623465997">23 465 997</a></p></address></div></div><div className="container footer-bottom"><span>© HUILERIE AL FERDAWS SARL</span><a href="#haut">Retour en haut ↑</a></div></footer>}

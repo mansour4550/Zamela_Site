@@ -1,0 +1,16 @@
+/* La composition vectorielle et visuelle vient du PDF original, sans altération.
+   Les liens sont positionnés dans le même repère que le document (1343.13 × 3680.04, 2988.12 ou 3198.72). */
+.process-exact-page, .quality-exact-page, .certifications-exact-page{width:100%;background:#fff;position:relative;isolation:isolate}
+.process-exact-canvas{width:100%;position:relative;aspect-ratio:1343.13 / 3680.04}
+.quality-exact-canvas{width:100%;position:relative;aspect-ratio:1343.13 / 2988.12}
+.quality-exact-page > .quality-exact-canvas{position:relative}
+.certifications-exact-canvas{width:100%;position:relative;aspect-ratio:1343.13 / 3198.72}
+.process-exact-art, .quality-exact-art, .certifications-exact-art{display:block;width:100%;height:auto;max-width:none;margin:0}
+.process-exact-link, .quality-exact-link, .certifications-exact-link{position:absolute;display:block;background:transparent;border:0;border-radius:3px}
+.process-exact-link:focus-visible, .quality-exact-link:focus-visible, .certifications-exact-link:focus-visible{outline:2px solid #172f49;outline-offset:2px;background:#d5b03822}
+.process-exact-link:hover, .quality-exact-link:hover, .certifications-exact-link:hover{background:#d5b03812}
+.process-exact-anchor, .quality-exact-anchor, .certifications-exact-anchor{position:absolute;left:0;width:1px;height:1px;pointer-events:none;scroll-margin-top:20px}
+.process-screen-reader, .quality-screen-reader, .certifications-screen-reader{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.process-skip, .quality-skip, .certifications-skip{position:fixed;top:8px;left:8px;transform:translateY(-200%);z-index:100;padding:12px;background:white;color:#172f49}
+.process-skip:focus, .quality-skip:focus, .certifications-skip:focus{transform:none}
+.process-exact-art>svg, .quality-exact-art>svg, .certifications-exact-art>svg{display:block;width:100%;height:auto}
