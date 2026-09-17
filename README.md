@@ -1,6 +1,4 @@
-# ZMELA Olive Oil — Site Web
-
-Première page : Certifications & Awards, recréée en React à partir de « new site page certification.pdf ».
+# ZMELA Olive Oil  Site Web
 
 ## Lancer le projet
 
